@@ -10,7 +10,7 @@ const AboutPage: React.FC = () => {
         <section className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:p-8 space-y-4">
           <h1 className="text-3xl sm:text-4xl font-bold">About Us</h1>
           <p className="text-gray-300 text-sm leading-relaxed">
-            LuneCare is a premium healthcare operations platform designed for
+            Medigo is a premium healthcare operations platform designed for
             modern clinics, doctors, and patients.
           </p>
           <p className="text-gray-300 text-sm leading-relaxed">
