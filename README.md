@@ -1,32 +1,22 @@
-# LuneCare ⚕️
-
+<h2 align="center">Medigo ⚕</h2>️
 <p align="center">
-
+Enterprise-grade full-stack booking platform for doctors and patients using event-driven microservices architecture.
 </p>
 
 <div align="center">
-
-**Enterprise-grade healthcare appointment platform built using Spring Boot microservices, Spring Cloud, event-driven
-messaging, and full observability.**
-
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
-[![Java](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=openjdk)](https://openjdk.org/projects/jdk/21/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4-brightgreen?style=for-the-badge&logo=spring)](https://spring.io/projects/spring-boot)
-[![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-Microservices-green?style=for-the-badge&logo=spring)](https://spring.io/projects/spring-cloud)
-[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://react.dev)
-[![Observability](https://img.shields.io/badge/Observability-OpenTelemetry-purple?style=for-the-badge&logo=opentelemetry)](https://opentelemetry.io/)
-[![Event Driven](https://img.shields.io/badge/Architecture-Event%20Driven-blue?style=for-the-badge&logo=apachekafka)](https://kafka.apache.org/)
-[![Resilience4j](https://img.shields.io/badge/Resilience4j-Fault%20Tolerance-red?style=for-the-badge)](https://resilience4j.readme.io/)
-
+  <img src="https://img.shields.io/badge/Java-21-orange?logo=openjdk&logoColor=white" alt="Java">
+  <img src="https://img.shields.io/badge/Spring%20Boot-3.4-6DB33F?logo=spring&logoColor=white" alt="Spring Boot">
+  <img src="https://img.shields.io/badge/Spring%20Cloud-Microservices-6DB33F?logo=spring&logoColor=white" alt="Spring Cloud">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black" alt="React">
+  <img src="https://img.shields.io/badge/OpenTelemetry-Observability-7B42BC?logo=opentelemetry&logoColor=white" alt="Observability">
+  <img src="https://img.shields.io/badge/Event%20Driven-Apache%20Kafka-231F20?logo=apachekafka&logoColor=white" alt="Event Driven">
+  <img src="https://img.shields.io/badge/Resilience4j-Fault%20Tolerance-D32F2F" alt="Resilience4j">
+  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
 </div>
 
 ![architecture](/public/diagrams/architecture-diagram.png)
 
 ## 1. Project Overview
-
-### Project Name
-
-**LuneCare**
 
 ### Problem Statement
 
@@ -62,7 +52,7 @@ and submit feedback while admins can verify doctors.
 
 ### What the Application Does
 
-LuneCare supports end-to-end lifecycle:
+Medigo supports end-to-end lifecycle:
 
 1. patient/doctor registration and login
 2. doctor onboarding, clinic setup, schedule creation
@@ -529,7 +519,7 @@ Consumers:
 ## 11. Configuration Management
 
 - Services import config via `spring.config.import=configserver:http://localhost:8888`.
-- Config server sources from Git repo (`lune-care-config`).
+- Config server sources from Git repo (`medigo-config`).
 - Profiles: primarily `dev`, with `docker` overlay in containerized runtime.
 - Cloud Bus refresh endpoint available (`/actuator/busrefresh`) to propagate config updates.
 - Encryption support in config server (`encrypt.key`) for encrypted `{cipher}` values.
@@ -555,13 +545,13 @@ Consumers:
 
 ### Networking
 
-- shared bridge network: `lunecare_network`
+- shared bridge network: `medigo_network`
 - inter-container DNS by service names
 
 ### Volumes
 
 - persistent data for PostgreSQL, MongoDB, RabbitMQ, Redis
-- mounted `init-db.sql`
+- mounted `init_db.sql`
 - mounted RSA key directory into auth and gateway containers
 
 ### Health Checks
